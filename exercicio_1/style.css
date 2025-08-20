@@ -33,7 +33,7 @@ body {
 }
 
 #title {
-    font-size: 2.25rem
+    font-size: 2.25rem;
     position: relative;
 }
 
@@ -61,5 +61,5 @@ body {
     background-color: #3f3f46;
     padding: 0.3rem;
     border-radius: 3px;
-    margin-top: 3px
+    margin-top: 3px;
 }
