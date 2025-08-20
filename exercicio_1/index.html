@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="teste.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <main>    
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">
+                    Calculadora de IMC
+                </h1>
+
+                <div class="input-box">
+                    <label for="weight">
+                        Peso (kg):
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-scale"></i>
+                        <input type="number" id="weight" required>
+                        <span> 
+                            Kg
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height">
+                        Altura (cm):
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i>
+                        <input type="number" id="height" required>
+                        <span>
+                            Cm
+                        </span>
+                    </div>
+                </div>
+
+                <button id="Calculate">
+                    Calcular
+                </button>
+            </form>
+
+
+            <div id="infos">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+    </main>
+</body>
+</html>
