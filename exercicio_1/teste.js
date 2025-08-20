@@ -31,4 +31,13 @@ function calculaIMC(event) {
 
 }
 
+function Faixa_etaria() {
+
+    const idade = parseInt(document.getElementById("idade").value)
+
+    if (idade >=0 && idade < 15) {
+        faixa = 
+    }
+}
+
 document.getElementById('form').addEventListener('submit', calculaIMC);
