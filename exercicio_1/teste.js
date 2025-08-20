@@ -1,8 +1,11 @@
-function calculaIMC() {
-    let nome = prompt("Digite seu nome")
-    let altura = prompt("Digite sua altura (em cm): ") / 100
-    let peso = prompt("Digite seu peso (em kg): ")
-    let imc = (peso / (altura * altura)).toFixed(2)
+function calculaIMC(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById("name").value;
+    const peso = parseFloat(document.getElementById("weight").value)
+    const altura = parseFloat(document.getElementById("height").value) / 100;
+
+    const imc = (peso / (altura * altura)).toFixed(2)
 
     //Classificação de IMC
     let classificacao = "";
@@ -26,4 +29,6 @@ function calculaIMC() {
 
     alert(nome + " possui índice de massa corporal igual a " + imc + ", sendo classificado como: " + classificacao)
 
-}    
+}
+
+document.getElementById('form').addEventListener('submit', calculaIMC);
