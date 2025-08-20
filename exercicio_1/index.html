@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="teste.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JavaScript</title>
@@ -15,7 +14,18 @@
                 <h1 id="title">
                     Calculadora de IMC
                 </h1>
-
+                <!-- Nome do usuário -->
+                <div class="input-box">
+                    <label for="name">
+                        Nome:
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" required>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Peso (em quilogramas) do usuário -->
                 <div class="input-box">
                     <label for="weight">
                         Peso (kg):
@@ -28,7 +38,7 @@
                         </span>
                     </div>
                 </div>
-
+                <!-- Altura (em centímetros) do usuário  -->
                 <div class="input-box">
                     <label for="height">
                         Altura (cm):
@@ -46,21 +56,8 @@
                     Calcular
                 </button>
             </form>
-
-
-            <div id="infos">
-                <div id="result">
-                    <div id="bmi">
-                        <span id="value"></span>
-                        <span>Seu IMC</span>
-                    </div>
-                    <div id="description">
-                        <span></span>
-                    </div>
-                </div>
-            </div>        
         </section>
-
     </main>
+    <script src="teste.js"></script>
 </body>
 </html>
