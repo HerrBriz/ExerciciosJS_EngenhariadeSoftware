@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <main>
+
+        <section id="classificador">
+            <form id="form">
+                <h1 id="title">
+                    Classicação de Idade
+                </h1>
+
+                <div class="input-box">
+                    <label for="rastreamento">
+                        Quer que suas peças sejam rastreadas?
+                    </label>
+                    <div class="input-field">
+                        <label>Quer rastreamento?</label><br>
+                        <input type="radio" name="rastreamento" value="S"> SIM
+                        <input type="radio" name="rastreamento" value="N"> NÃO
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="quantidade">Quantidade de peças:</label>
+                        <input type="number" id="quantidade" required>
+                    </div>
+                </div>
+                
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="distancia">Distância (km):</label>
+                        <input type="number" id="distancia" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <label>Região:</label><br>
+                        <input type="radio" name="regiao" value="1"> Sul
+                        <input type="radio" name="regiao" value="2"> Sudeste
+                        <input type="radio" name="regiao" value="3"> Centro-Oeste
+                    </div>
+                </div>
+                
+
+                <button id="Calculadora">
+                    Calcular
+                </button>
+
+            </form>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>
