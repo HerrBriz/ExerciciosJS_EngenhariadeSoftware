@@ -1,51 +1,27 @@
-function calcula_frete(event) {
+function classificadora(event) {
     event.preventDefault();
 
-     const quantidade = Number(document.getElementById("quantidade").value);
-    const distancia = Number(document.getElementById("distancia").value);
-    const rastreamento = document.querySelector("input[name='rastreamento']:checked")?.value;
-    const regiao = document.querySelector("input[name='regiao']:checked")?.value;
+    const laboratorio = parseFloat(document.getElementById("notalaboratorio").value).toFixed(2);
+    const prova = parseFloat(document.getElementById("notaprova").value).toFixed(2);
+    const trabalho = parseFloat(document.getElementById("notatrabalho").value);
 
-    if (!rastreamento || !regiao) {
-        alert("Por favor, selecione rastreamento e região!");
-        return;
-    }
+    const media = ((laboratorio * 2) + (prova * 5) + (trabalho * 3) / 10).toFixed(2);
 
-    // Valores base por região
-    let precoBase, desconto;
-    switch (regiao) {
-        case "1": // Sul
-            precoBase = 1.00;
-            desconto = 0.10;
-            break;
-        case "2": // Sudeste
-            precoBase = 1.20;
-            desconto = 0.12;
-            break;
-        case "3": // Centro-Oeste
-            precoBase = 1.30;
-            desconto = 0.13;
-            break;
-    }
-
-    // Cálculo das peças
-    let valorPecas = 0;
-    if (quantidade <= 1000) {
-        valorPecas = quantidade * precoBase;
+    if (media > 9){
+        let classificacao = "A";
+    } else if (media > 8 && media <= 9){
+        classificacao = "B";
+    } else if (media > 7 && media <= 8){
+        classificacao = "C";
+    } else if (media > 6 && media <= 7){
+        classificacao = "D";
+    } else if (media > 5 && media <= 6){
+        classificacao = "E";
     } else {
-        valorPecas = (1000 * precoBase) + ((quantidade - 1000) * (precoBase * (1 - desconto)));
+        classificacao = "F";
     }
+    alert(`A média do aluno = ${media} e a sua classificação é ${classificacao}`);
 
-    // Cálculo combustível
-    let valorCombustivel = distancia * 1; // 1 litro/km
-
-    // Taxa rastreamento
-    let taxaRastreamento = rastreamento === "S" ? 200 : 0;
-
-    // Total
-    let total = valorPecas + valorCombustivel + taxaRastreamento;
-
-    alert(`Taxa de rastreamento: R$ ${taxaRastreamento.toFixed(2)}\nValor do frete pelas peças: R$ ${valorPecas.toFixed(2)}\nValor do frete por quilômetro: R$ ${valorCombustivel.toFixed(2)}\nTotal do frete: R$ ${total.toFixed(2)}`);
 }
 
-document.getElementById('form').addEventListener('submit', calcula_frete);
+document.getElementById('form').addEventListener('submit', classificadora);

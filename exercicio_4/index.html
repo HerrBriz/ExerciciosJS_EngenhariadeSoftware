@@ -13,31 +13,41 @@
         <section id="classificador">
             <form id="form">
                 <h1 id="title">
-                    Classificação de aluno
+                    Calculadora
                 </h1>
 
                 <div class="input-box">
                     <div class="input-field">
-                        <label for="laboratorio">Atividade prática Laboratório: </label>
-                        <input type="number" id="notalaboratorio" step="0.01" required>
+                        <label for="quantidade">Quantidade de peças: </label>
+                        <input type="number" id="quantidade" required>
                     </div>
                 </div>
                 
                 <div class="input-box">
                     <div class="input-field">
-                        <label for="distancia">Prova do Semestre: </label>
-                        <input type="number" id="notaprova" step="0.01" required>
+                        <label for="distancia">Distância (km):</label>
+                        <input type="number" id="distancia" required>
                     </div>
                 </div>
 
                 <div class="input-box">
                     <div class="input-field">
-                        <label for="distancia">Trabalho teorico: </label>
-                        <input type="number" id="notatrabalho" step="0.01" required>
+                        <label>Região:</label><br>
+                        <input type="radio" name="regiao" value="1" required> Sul
+                        <input type="radio" name="regiao" value="2"> Sudeste
+                        <input type="radio" name="regiao" value="3"> Centro-Oeste
                     </div>
                 </div>
 
-                <button id="calculadora_classificadora">
+                <div class="input-box">
+                    <div class="input-field">
+                        <label>Deseja rastreamento?</label><br>
+                        <input type="radio" name="rastreamento" value="S" required> Sim
+                        <input type="radio" name="rastreamento" value="N"> Não
+                    </div>
+                </div>
+
+                <button id="Calculadora">
                     Calcular
                 </button>
 
